@@ -1,2 +1,135 @@
-<title> LUMAJI</title>
-<h1>HALOO</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Website Saya</title>
+</head>
+    <script>
+        function ShowPage(page)
+        {
+        var Div=document.getElementById('halaman');
+        var html='';
+        if(page==1)
+        {
+            html+='<h3 style="color:#1F3F7F;">Artikel Pertama</h3>';
+            html+='<p>The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog</p>';
+            html+='<h3 style="color:#1F3F7F;">Artikel Kedua</h3>';
+            html+='<p>The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog</p>';
+            html+='<h3 style="color:#1F3F7F;">Artikel Ketiga</h3>';
+            html+='<p>The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog The quick brown fox jumps over the lazy dog</p>';
+            
+        }
+        else if(page==2)
+        {
+		
+			html+='<table width="50%" noborder="1px">';
+			html+='<tr align="center">';
+			html+='<td style="padding:0px 5px 0px 0px;" ><img src="superman.jpg" class="Galeri"></td>';
+			html+='<td style="padding:0px 5px 0px 0px;"><img src="superman.jpg" class="Galeri"></td>';
+			html+='</tr>';
+			html+='</table>';
+        }
+        else
+        {
+            html+='<b class="palingkiri">Username</b>';
+            html+='<input class="kiriku" type="text" placeholder="Username">';
+            html+='<br>';
+            html+='<br>';
+            html+='<b class="palingkiri">Password</b>';
+            html+='<input class="kiriku" type="password" placeholder="Password">';
+            html+='<br>';
+            html+='<br>';
+            html+='<div class="kiriku"><input id="TOMBOL_HOME" type="button" value="LOGIN" onclick="HitungALL();"></div>';
+        }
+        Div.innerHTML=html;
+        }
+    </script>
+    <style>
+        .judul
+		{
+			color: white;
+			box-shadow: 0px 2px 4px 0px gray;
+			text-shadow: 0px 2px 4px 0px black;
+			background: #1F3F7F;
+			padding: 2px;
+            border-radius: 40px;
+			border: 2px solid white;
+		}
+        .Judultxt
+        {
+        font-size: 35px;
+        }
+        .kiriku
+        {
+        margin: 0% 2%; 
+        float: left; 
+
+        }
+        .palingkiri
+        {
+        margin: 0% 1%; 
+        float: left; 
+
+        }
+        .bulat
+        {
+            border-radius: 75em;
+            width: 30px;
+            height: 30px;
+            box-shadow: 1px 2px 2px 1px #112236;
+        }
+		
+		.Galeri
+		{
+		width:200px ; 
+		box-shadow:0px 2px 5px 2px grey;"
+		}		
+        .tombol
+	    {
+            background: #1F3F7F;
+            color:white;
+            font-weight: bold;
+            border-radius: 10px;
+            box-shadow: 1px 2px 4px 1px black;
+            padding:10px 20px;
+            font-family:sans-serif;
+            font-size:11pt;
+	    }
+        .tombol:focus
+	    {
+            background: purple;
+            font-weight: bold;
+            border-radius: 10px;
+			color:black;
+            border: 2px solid white;
+            box-shadow: 0px 2px 2px 0px black;
+            padding:10px 20px;
+			font-size:11pt;
+            font-family:sans-serif;
+            outline:none;
+	    }
+        #TOMBOL_HOME
+	    {
+            background: #1F3F7F;
+            color:white;
+            border-radius: 25px;
+            border: 2px solid white;
+            box-shadow: 0px 2px 4px 0px gray;
+            padding:10px 20px;
+            font-family:sans-serif;
+            font-size:11pt;
+	    }
+    </style>
+	<body onload="ShowPage(1)">
+	<div class="judul" style="text-align: center;">
+	<img class="bulat" src="superman.jpg" style="width:45px ; height:45px; box-shadow:0px 0px 2px 2px grey; border:2px solid white; border-radius:50px; box-shadow:0px 0px 1px 1px black; vertical-align:middle;">
+	<b class="Judultxt">Selamat Datang
+	</b><img class="bulat" src="superman.jpg" style="width:45px ; height:45px; box-shadow:0px 0px 2px 2px grey; border:2px solid white; border-radius:50px; box-shadow:0px 0px 1px 1px black; vertical-align:middle;">
+	</div>
+	<br>
+    <input class="tombol" type="button" value="Home" onclick="ShowPage(1);">
+    <input class="tombol" type="button" value="Gallery" onclick="ShowPage(2);">
+    <input class="tombol" type="button" value="Login" onclick="ShowPage(3);">
+<hr>
+<div id="halaman"></div>
+</body>
+</html>
